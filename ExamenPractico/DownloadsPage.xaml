@@ -1,0 +1,24 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenPractico.DownloadsPage"
+             Title="Descargar Canciones">
+
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <Label Text="Obtén las canciones en tu dispositivo:" FontSize="16" />
+
+        <Button Text="Descargar: Cryogen (.mp3)"
+                Clicked="OnDownloadTrack"
+                CommandParameter="Cryogen.mp3"
+                CornerRadius="10" />
+
+        <Button Text="Descargar: Madness (.mp3)"
+                Clicked="OnDownloadTrack"
+                CommandParameter="Madness.mp3"
+                CornerRadius="10" />
+
+        <Button Text="Descargar: Plug in Baby (.mp3)"
+                Clicked="OnDownloadTrack"
+                CommandParameter="PluginBaby.mp3"
+                CornerRadius="10" />
+    </VerticalStackLayout>
+</ContentPage>

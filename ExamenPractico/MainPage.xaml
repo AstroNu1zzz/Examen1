@@ -1,0 +1,66 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="ExamenPractico.MainPage">
+
+    <Grid>
+        <toolkit:MediaElement x:Name="BackgroundAudio"
+                               Source="embed://Hush.mp3"
+                               ShouldAutoPlay="True"
+                               ShouldLoopPlayback="True"
+                               HeightRequest="1"
+                               WidthRequest="1"
+                               Opacity="0" />
+
+        <ScrollView>
+            <VerticalStackLayout Padding="24, 40, 24, 40" Spacing="20">
+
+                <Image Source="muselogo.png"
+                       HeightRequest="100"
+                       Aspect="AspectFit"
+                       HorizontalOptions="Center" />
+
+                <Label Text="Banda británica de rock alternativo formada en 1994. Conocida por sus potentes actuaciones en vivo y su fusión de rock progresivo, música clásica y electrónica."
+                       FontSize="15"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{AppThemeBinding Light=#666666, Dark=#8E8E93}" />
+
+                <VerticalStackLayout Spacing="12" Margin="0, 10, 0, 20">
+                    <Button x:Name="ConciertoBtn"
+                            Text="Ver Concierto en Vivo"
+                            Clicked="OnConciertoClicked"
+                            CornerRadius="12"
+                            HeightRequest="50" />
+
+                    <Button x:Name="DescargasBtn"
+                            Text="Descargar Canciones"
+                            Clicked="OnDescargasClicked"
+                            CornerRadius="12"
+                            HeightRequest="50" />
+
+                    <Button x:Name="FeedbackBtn"
+                            Text="Enviar Feedback"
+                            Clicked="OnFeedbackClicked"
+                            CornerRadius="12"
+                            HeightRequest="50" />
+                </VerticalStackLayout>
+
+                <Border StrokeThickness="1"
+                        Padding="16"
+                        Margin="0, 20, 0, 0">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Seleccionar Tema:" FontAttributes="Bold" />
+                        <RadioButton Content="Oscuro"
+                                     IsChecked="True"
+                                     CheckedChanged="OnThemeChanged"
+                                     Value="Dark" />
+                        <RadioButton Content="Claro"
+                                     CheckedChanged="OnThemeChanged"
+                                     Value="Light" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

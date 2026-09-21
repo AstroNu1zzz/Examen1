@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="ExamenPractico.ConcertPage"
+             Shell.PresentationMode="Modal">
+
+    <Grid BackgroundColor="#000000">
+        <toolkit:MediaElement x:Name="ConcertVideo"
+                               Source="embed://Muse.mp4"
+                               ShouldAutoPlay="True"
+                               ShouldShowPlaybackControls="True"
+                               Aspect="AspectFit"
+                               HorizontalOptions="Fill"
+                               VerticalOptions="Fill" />
+
+        <Button Text="✕"
+                Clicked="OnCloseClicked"
+                BackgroundColor="#80000000"
+                TextColor="#FFFFFF"
+                CornerRadius="20"
+                HeightRequest="40"
+                WidthRequest="40"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                Margin="16" />
+    </Grid>
+</ContentPage>
